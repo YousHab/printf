@@ -7,12 +7,10 @@
  * Return: the number of printed characters
  */
 
-int print_int(va_list args)
+int print_int(int n)
 {
-	int n;
 	int count = 0;
 
-	n = va_arg(args, int);
 	if (n < 0)
 	{
 		_putchar('-');

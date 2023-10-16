@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int count = 0;
+	int n;
 
 	va_start(args, format);
 
@@ -34,7 +35,8 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 'i' || *format == 'd')
 			{
-				count += print_int(args);
+				n = va_arg(args, int);
+				count += print_int(n);
 			}
 		}
 		else
@@ -47,3 +49,43 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
+
+
+int main(void)
+
+{
+	_printf("my name is %s : \n", "ali");
+	_printf("I'am %i\n", 27);
+	_printf("percent %%\n");
+	_printf("char %c", 'a');
+
+	return (0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

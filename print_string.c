@@ -12,7 +12,7 @@ int print_string(va_list args)
 	char *s;
 	int count = 0;
 
-	s = va_args(args, char *);
+	s = va_arg(args, char *);
 
 	while (*s != '\0')
 	{
