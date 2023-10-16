@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int count = 0;
-	int n;
+	unsigned int n;
 
 	va_start(args, format);
 
@@ -37,6 +37,11 @@ int _printf(const char *format, ...)
 			{
 				n = va_arg(args, int);
 				count += print_int(n);
+			}
+			else if (*format == 'b')
+			{
+				n = va_arg(args, int);
+				count += print_binary(n);
 			}
 		}
 		else
