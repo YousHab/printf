@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	char *buffer[BUFFER_SIZE];
+	char buffer[BUFFER_SIZE];
 	int index_buffer = 0;
 	int count = 0;
 	int m;

@@ -10,6 +10,7 @@ int main(void)
         _printf("%x\n", 0);
 	_printf("%X\n", 75896);
 	_printf("%x\n", -122);
+	_printf("youssef");
 
 	return (0);
 }
