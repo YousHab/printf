@@ -18,5 +18,6 @@ int print_unsigned(unsigned int n);
 int print_octal(int n);
 int print_hexa(unsigned int n);
 int print_HEXA(unsigned int n);
+int print_non_printable(va_list args);
 
 #endif

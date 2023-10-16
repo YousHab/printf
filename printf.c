@@ -65,13 +65,17 @@ int _printf(const char *format, ...)
 				n = va_arg(args, unsigned int);
 				count += print_HEXA(n);
 			}
+			else if (*format == 'S')
+			{
+				count += print_non_printable(args);
+			}
 		}
 		else
 		{
 			buffer[index_buffer] = *format;
 			index_buffer++;
 			count++;
-			if (index_buffer == 1024)
+			if (index_buffer == BUFFER_SIZE - 1)
 			{
 				write(1, buffer, index_buffer);
 				index_buffer = 0;
