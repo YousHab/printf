@@ -9,6 +9,7 @@ int main(void)
 	_printf("%o\n", -42);
         _printf("%x\n", 0);
 	_printf("%X\n", 75896);
+	_printf("%x\n", -122);
 
 	return (0);
 }

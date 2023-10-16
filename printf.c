@@ -10,12 +10,13 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
+	char *buffer[BUFFER_SIZE];
+	int index_buffer = 0;
 	int count = 0;
 	int m;
 	unsigned int n;
 
 	va_start(args, format);
-
 	while (*format)
 	{
 		if (*format == '%')
@@ -67,8 +68,14 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(*format);
+			buffer[index_buffer] = *format;
+			index_buffer++;
 			count++;
+			if (index_buffer == 1024)
+			{
+				write(1, buffer, index_buffer);
+				index_buffer = 0;
+			}
 		}
 		format++;
 	}
