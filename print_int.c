@@ -2,7 +2,7 @@
 /**
  * print_int - prints a integen.
  *
- * @args: argument to print.
+ * @n: argument to print.
  *
  * Return: the number of printed characters
  */
