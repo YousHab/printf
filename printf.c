@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int count = 0;
+	int m;
 	unsigned int n;
 
 	va_start(args, format);
@@ -35,13 +36,33 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 'i' || *format == 'd')
 			{
-				n = va_arg(args, int);
+				m = va_arg(args, int);
 				count += print_int(n);
 			}
 			else if (*format == 'b')
 			{
-				n = va_arg(args, int);
+				n = va_arg(args, unsigned int);
 				count += print_binary(n);
+			}
+			else if (*format == 'u')
+			{
+				n = va_arg(args, unsigned int);
+				count += print_unsigned(n);
+			}
+			else if (*format == 'o')
+			{
+				m = va_arg(args, int);
+				count += print_octal(m);
+			}
+			else if (*format == 'x')
+			{
+				n = va_arg(args, unsigned int);
+				count += print_hexa(n);
+			}
+			else if (*format == 'X')
+			{
+				n = va_arg(args, unsigned int);
+				count += print_HEXA(n);
 			}
 		}
 		else
