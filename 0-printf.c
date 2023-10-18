@@ -9,14 +9,19 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int count = 0;
-
-	int *(f)(va_list args);
+	int (*f)(va_list);
 
 	va_start(args, format);
 	if (!format || (format[0] == '%' && !format[1]))
+	{
+		va_end(args);
 		return (-1);
+	}
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
+	{
+		va_end(args);
 		return (-1);
+	}
 	while (*format != '\0')
 	{
 		if (*format != '%')
@@ -27,14 +32,19 @@ int _printf(const char *format, ...)
 		else
 		{
 			format++;
-			f = get_function(*format, args);
-			if (f != NULL)
+			if (*format == '%')
 			{
-				count += f(args);
+				_putchar('%');
+				count++;
+				format++;
 			}
 			else
-				return (-1);
+			{
+				f = get_function(*format);
+				count += f(args);
+			}
 		}
+
 	}
 
 	va_end(args);

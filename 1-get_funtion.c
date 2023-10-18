@@ -2,12 +2,12 @@
 /**
  */
 
-int *(*get_function(char c, va_list args))(va_list)
+int (*get_function(char c))(va_list)
 {
 	int i = 0;
 	sp_t specifiers[]= {{'c', print_char},
-		{'s', print_string},
-		{'%', print_percent},
+		{'s', print_string}};
+	/*
 		{'d', print_int},
 		{'i', print_int},
 		{'b', print_binary},
@@ -20,11 +20,11 @@ int *(*get_function(char c, va_list args))(va_list)
 		{'r', print_rev},
 		{'R', print_rot},
 		{'\0', NULL}};
-
+	*/
 	while (specifiers[i].s != '\0')
 	{
 		if (c == specifiers[i].s)
-			return (specifier[i].f);
+			return (specifiers[i].f);
 		i++;
 	}
 	return (NULL);

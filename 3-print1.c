@@ -38,13 +38,11 @@ int print_str(va_list args)
  * @args: arguments to be printed
  * Return: number of printed characters.
  */
-
-int print_int(va_list args)
+/*
+int print_int(int n)
 {
-	int n;
 	int count = 0;
 
-	n = va_arg(args, int);
 	if (n < 0)
 	{
 		n = -n;
@@ -52,7 +50,7 @@ int print_int(va_list args)
 	}
 	if (n != 0)
 	{
-		count += print_int(n / 10);
+		count += (int)print_int(n / 10);
 
 	}
 	_putchar((n % 10) + '0');
@@ -65,13 +63,10 @@ int print_int(va_list args)
  * Return: number of printed characters
  *
  */
-
-int print_binary(va_list args)
+/*
+int print_binary(int n)
 {
-	unsigned int n;
 	int count = 0;
-
-	n = va_arg(args, unsigned int);
 
 	if (n != 0)
 	{
@@ -80,4 +75,4 @@ int print_binary(va_list args)
 	_putchar((n % 2) + '0');
 	count++;
 	return (count);
-}
+}*/
