@@ -1,19 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-
-/**
- * main - Entry point
- *
- * Return: 0 on success, error code otherwise
- */
-
 int main(void)
 {
 	int len, len2;
 
-	len = _printf("Let's print a simple sentence.\n");
-	len2 = printf("Let's print a simple sentence.\n");
+	len = _printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48);
+	len2 = printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48);
+	_putchar(48);
+	putchar(48);
+	printf("%c", 48);
+	_printf("%c", 48);
 	fflush(stdout);
 	if (len != len2)
 	{

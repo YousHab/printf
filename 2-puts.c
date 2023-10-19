@@ -13,7 +13,8 @@ int _puts(char *s)
 
 	while (*s)
 	{
-		count += _putchar(*s);
+		_putchar(*s);
+		count++;
 	}
 	return (count);
 }

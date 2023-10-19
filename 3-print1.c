@@ -14,7 +14,8 @@ int print_char(va_list args)
 	int count = 0;
 
 	c = va_arg(args, int);
-	count += _putchar(c);
+	_putchar(c);
+	count++;
 	return (count);
 }
 
