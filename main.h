@@ -29,6 +29,8 @@ int _printf(const char *format, ...);
 int (*get_function(char s))(va_list);
 int print_char(va_list args);
 int print_str(va_list args);
+int print_int(va_list args);
+int print_va_int(int n);
 
 
 #endif

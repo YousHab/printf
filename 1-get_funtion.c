@@ -10,6 +10,8 @@ int (*get_function(char c))(va_list)
 	int i = 0;
 	sp_t specifiers[] = {{'c', print_char},
 		{'s', print_str},
+		{'i', print_int},
+		{'d', print_int},
 		{'\0', NULL}};
 
 	while (specifiers[i].s != '\0')
