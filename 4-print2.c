@@ -26,7 +26,7 @@ int print_va_bin(unsigned int n)
 {
 	int count = 0;
 
-	if (n != 0)
+	if (n / 2 != 0)
 	{
 		print_va_bin(n / 2);
 	}
