@@ -29,5 +29,6 @@ int _puts(char *s)
 
 int _putchar(int c)
 {
-	return (write(1, &c, 1));
+	write(1, &c, 1);
+	return (1);
 }
