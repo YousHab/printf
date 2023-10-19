@@ -3,9 +3,10 @@
 #include "main.h"
 int main(void)
 {
-	int len, len2;	
-	len = _printf("A char inside a sentence: %c. Did it work?\n", 'F');
-	len2 = printf("A char inside a sentence: %c. Did it work?\n", 'F');
+	int len, len2;
+
+	len = _printf("%s", "This sentence is retrieved from va_args!\n");
+	len2 = printf("%s", "This sentence is retrieved from va_args!\n");
 	fflush(stdout);
 	if (len != len2)
 	{
