@@ -36,7 +36,7 @@ int print_str(va_list args)
 }
 
 /**
- * print_va_list - function that prints an integer.
+ * print_va_int - function that prints an integer.
  * @n: the number to be printed.
  * Return: the count.
  */
@@ -51,7 +51,7 @@ int print_va_int(int n)
 		count++;
 	}
 
-	if (n != 0)
+	if ((n / 10) != 0)
 	{
 		count += print_va_int(n / 10);
 	}
@@ -74,7 +74,7 @@ int print_int(va_list args)
 
 	n = va_arg(args, int);
 	count = print_va_int(n);
-	return(count);
+	return (count);
 }
 
 
