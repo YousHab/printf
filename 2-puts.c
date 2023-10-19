@@ -10,14 +10,13 @@
 int _puts(char *s)
 {
 	int count = 0;
-
-	while(*s != '\0')
+	while(*s)
 	{
 		count += _putchar(*s);
-		s++;
 	}
 	return (count);
 }
+
 /**
  * _putchar - a fucntion that displays a character.
  *
@@ -28,18 +27,5 @@ int _puts(char *s)
 
 int _putchar(int c)
 {
-	static char buffer[BUFFER_SIZE];
-	static int i = 0;
-	
-	if (i == BUFFER_SIZE - 1)
-	{
-		write(1, buffer, i + 1);
-		i = 0;
-	}
-	else
-	{
-		buffer[i] = c;
-		i++;
-	}
-	return(1);
+	return(write(1, &c, 1));
 }

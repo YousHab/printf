@@ -1,5 +1,8 @@
 #include "main.h"
 /**
+ * get_function - a function pointer to pick the appropriate function.
+ * @c: the specifier.
+ * Return: a pointer to the function.
  */
 
 int (*get_function(char c))(va_list)
