@@ -32,6 +32,8 @@ int print_char(va_list args);
 int print_str(va_list args);
 int print_int(va_list args);
 int print_va_int(int n);
+int print_bin(va_list args);
+int print_va_bin(unsigned int n);
 
 
 #endif
