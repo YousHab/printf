@@ -9,7 +9,7 @@ int (*get_function(char c))(va_list)
 {
 	int i = 0;
 	sp_t specifiers[] = {{'c', print_char},
-		{'s', print_str}
+		{'s', print_str},
 		{'\0', NULL}};
 
 	while (specifiers[i].s != '\0')
