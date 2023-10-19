@@ -8,6 +8,13 @@
 
 #define BUFFER_SIZE 1024
 #define BUFF -1
+/**
+ * struct specifier - Structure that contains a specifier and
+ * a pointer to the related function
+ * @s: the specifier.
+ * @f: a function pointer.
+ *
+ */
 
 typedef struct specifier
 {
@@ -22,19 +29,6 @@ int _printf(const char *format, ...);
 int (*get_function(char s))(va_list);
 int print_char(va_list args);
 int print_str(va_list args);
-/*int print_int(int n);
-int print_binary(int n);
-int print_unsigned(va_list args);
-int print_octal(va_list args);
-int *convert_to_oct(int n);
-char *conver_to_hex(int n);
-int print_add(va_list args);
-int print_hex(va_list args);
-int print_HEX(va_list args);
-int print_S(va_list args);
-int print_address(va_list args);
-int print_rev(va_list args);
-int print_rot(va_list args);*/
 
 
 #endif

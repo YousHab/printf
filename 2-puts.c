@@ -10,7 +10,8 @@
 int _puts(char *s)
 {
 	int count = 0;
-	while(*s)
+
+	while (*s)
 	{
 		count += _putchar(*s);
 	}
@@ -27,5 +28,5 @@ int _puts(char *s)
 
 int _putchar(int c)
 {
-	return(write(1, &c, 1));
+	return (write(1, &c, 1));
 }
