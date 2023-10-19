@@ -26,9 +26,9 @@ int _puts(char *s)
  * Return: 1.
  */
 
-int _putchar(char c)
+int _putchar(int c)
 {
-	char buffer[BUFFER_SIZE];
+	static char buffer[BUFFER_SIZE];
 	static int i = 0;
 	
 	if (i == BUFFER_SIZE - 1)

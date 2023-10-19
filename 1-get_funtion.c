@@ -6,7 +6,7 @@ int (*get_function(char c))(va_list)
 {
 	int i = 0;
 	sp_t specifiers[]= {{'c', print_char},
-		{'s', print_string}};
+		{'s', print_str}};
 	/*
 		{'d', print_int},
 		{'i', print_int},

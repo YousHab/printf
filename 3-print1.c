@@ -33,12 +33,14 @@ int print_str(va_list args)
 	count += _puts(s);
 	return (count);
 }
-/**
+
+/*
+
  * print_int - print an integer.
  * @args: arguments to be printed
  * Return: number of printed characters.
- */
-/*
+ 
+
 int print_int(int n)
 {
 	int count = 0;
@@ -56,7 +58,7 @@ int print_int(int n)
 	_putchar((n % 10) + '0');
 	count++;
 	return (count);
-}
+}*/
 /**
  * print_binary - print a binary represantation of a integer.
  * @args: the argument to be evaluated.

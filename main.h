@@ -16,11 +16,11 @@ typedef struct specifier
 
 
 int _puts(char *s);
-int _putchar(char c);
+int _putchar(int c);
 int _printf(const char *format, ...);
 int (*get_function(char s))(va_list);
 int print_char(va_list args);
-int print_string(va_list args);
+int print_str(va_list args);
 /*int print_int(int n);
 int print_binary(int n);
 int print_unsigned(va_list args);
