@@ -33,14 +33,17 @@ int _putchar(int c)
 	static char buffer[BUFFER_SIZE];
 	static int i = 0;
 
-	if (c == BUFF || i >= BUFFER_SIZE)
+	if (i < BUFFER_SIZE)
 	{
-		write(1, buffer, i);
-		i = 0;
+		buffer[i] = c;
+		i++;
 	}
-	if (c != BUFF)
+	else
 	{
-		buffer[i++] = c;
+		write(1, &buffer, i);
+		i = 0;
+		buffer[i] = c;
+		i++;
 	}
 	return (1);
 }
