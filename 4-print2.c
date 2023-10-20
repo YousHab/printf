@@ -28,7 +28,7 @@ int print_va_bin(unsigned int n)
 
 	if (n / 2 != 0)
 	{
-		count += print_va_bin(n / 2);
+		count = print_va_bin(n / 2);
 	}
 	_putchar((n % 2) + '0');
 	count++;
@@ -69,7 +69,7 @@ int print_va_unsigned(unsigned int n)
 
 	if (n / 10 != 0)
 	{
-		count += print_va_unsigned(n / 10);
+		count = print_va_unsigned(n / 10);
 	}
 	_putchar((n % 10) + '0');
 	count++;

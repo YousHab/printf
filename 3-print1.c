@@ -53,7 +53,7 @@ int print_va_int(int n)
 
 	if ((n / 10) != 0)
 	{
-		count += print_va_int(n / 10);
+		count = print_va_int(n / 10);
 	}
 	_putchar(n % 10 + '0');
 	count++;
