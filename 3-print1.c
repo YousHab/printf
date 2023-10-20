@@ -57,7 +57,7 @@ int print_va_int(int n)
 	}
 	_putchar(n % 10 + '0');
 	count++;
-	return (count + 1);
+	return (count);
 }
 
 /**
