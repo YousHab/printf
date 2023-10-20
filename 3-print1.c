@@ -44,7 +44,7 @@ int print_va_int(int n)
 {
 	int count = 0;
 
-	if (n < 0)
+	if (n < 0 && n != INT_MIN)
 	{
 		n = -n;
 		_putchar('-');
