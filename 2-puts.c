@@ -30,6 +30,18 @@ int _puts(char *s)
 
 int _putchar(int c)
 {
-	write(1, &c, 1);
+	static char buffer[BUFFER_SIZE];
+	static int i = 0;
+	if (i < BUFFER_SIZE - 1)
+	{
+		buffer[BUFFER_size] = c;
+		i++;
+	}
+	else
+	{
+		buffer[BUFFER_SIZE] = '\0';
+		write(1, &buffer, BUFFER_SIZE);
+		i = 0;
+	}
 	return (1);
 }
