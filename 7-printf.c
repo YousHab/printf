@@ -15,14 +15,16 @@ int print_S(va_list args)
 	while(*s)
 	{
 		if (*s < 23 || *s >= 127)
-		_putchar((*str >> 4) < 10 ? ('0' + (*str >> 4)) : ('A' + (*str >> 4) - 10));
-		_putchar((*str & 0x0F) < 10 ? ('0' + (*str & 0x0F)) : ('A' + (*str & 0x0F) - 10));
+		{
+		_putchar((*s >> 4) < 10 ? ('0' + (*s >> 4)) : ('A' + (*s >> 4) - 10));
+		_putchar((*s & 0x0F) < 10 ? ('0' + (*s & 0x0F)) : ('A' + (*s & 0x0F) - 10));
 		count += 2;
-	}
-	else
-	{
-		_putchar(*s);
-		count++;
+		}
+		else
+		{
+			_putchar(*s);
+			count++;
+		}
 	}
 	return (count);
 }
