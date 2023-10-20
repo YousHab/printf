@@ -34,7 +34,7 @@ int _putchar(int c)
 	static int i = 0;
 	if (i < BUFFER_SIZE - 1)
 	{
-		buffer[BUFFER_size] = c;
+		buffer[BUFFER_SIZE] = c;
 		i++;
 	}
 	else
