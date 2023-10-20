@@ -30,17 +30,6 @@ int _puts(char *s)
 
 int _putchar(int c)
 {
-	static char buffer[BUFFER_SIZE];
-	static int i = 0;
-
-	if (c == BUFF || i >= BUFFER_SIZE)
-	{
-		write(1, buffer, i);
-		i = 0;
-	}
-	if (c != BUFFER_SIZE)
-	{
-		buffer[i++] = c;
-	}
+	write(1, buffer, 1);
 	return (1);
 }
