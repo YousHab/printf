@@ -84,4 +84,3 @@ int print_HEX(va_list args)
 	count = print_va_HEX(n);
 	return (count);
 }
-

@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 /**
  *
  */
@@ -12,7 +12,7 @@ int print_S(va_list args)
 	_putchar('\\');
 	_putchar('x');
 	count = 2;
-	while(s)
+	while(*s)
 	{
 		if (*s < 23 || *s >= 127)
 		_putchar((*str >> 4) < 10 ? ('0' + (*str >> 4)) : ('A' + (*str >> 4) - 10));
