@@ -40,8 +40,7 @@ int _putchar(int c)
 	}
 	if (c != BUFFER_SIZE)
 	{
-		buffer[i] = c;
-		i++;
+		buffer[i++] = c;
 	}
 	return (1);
 }
