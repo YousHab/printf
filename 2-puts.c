@@ -32,6 +32,7 @@ int _putchar(int c)
 {
 	static char buffer[BUFFER_SIZE];
 	static int i = 0;
+
 	if (i < BUFFER_SIZE - 1)
 	{
 		buffer[BUFFER_SIZE] = c;
@@ -40,7 +41,7 @@ int _putchar(int c)
 	else
 	{
 		buffer[BUFFER_SIZE] = '\0';
-		write(1, &buffer, BUFFER_SIZE);
+		write(1, buffer, BUFFER_SIZE);
 		i = 0;
 	}
 	return (1);
