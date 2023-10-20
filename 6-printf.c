@@ -11,7 +11,7 @@ int print_va_hex(unsigned int n)
 
 	if (n / 16 != 0)
 	{
-		count += print_va_hex(n / 16);
+		count = print_va_hex(n / 16);
 	}
 	digit = n % 16;
 	if (digit < 10)
@@ -54,7 +54,7 @@ int print_va_HEX(unsigned int n)
 
 	if (n / 16 != 0)
 	{
-		count += print_va_hex(n / 16);
+		count = print_va_hex(n / 16);
 	}
 	digit = n % 16;
 	if (digit < 10)
