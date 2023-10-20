@@ -8,7 +8,7 @@
 #include <limits.h>
 
 #define BUFFER_SIZE 1024
-#define BUFF -1
+
 
 /**
  * struct specifier - Structure that contains a specifier and
