@@ -13,6 +13,8 @@ int (*get_function(char c))(va_list)
 		{'i', print_int},
 		{'d', print_int},
 		{'b', print_bin},
+		{'u', print_unsinged},
+		{'o', print_octal},
 		{'\0', NULL}};
 
 	while (specifiers[i].s != '\0')

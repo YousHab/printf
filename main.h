@@ -34,6 +34,10 @@ int print_int(va_list args);
 int print_va_int(int n);
 int print_bin(va_list args);
 int print_va_bin(unsigned int n);
+int print_va_unsigned(unsigned int n);
+int print_unsigned(va_list args);
+int print_va_octal(unsigned int n);
+int print_octal(va_list args);
 
 
 #endif
