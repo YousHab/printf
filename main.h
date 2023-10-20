@@ -38,6 +38,10 @@ int print_va_unsigned(unsigned int n);
 int print_unsigned(va_list args);
 int print_va_octal(unsigned int n);
 int print_octal(va_list args);
+int print_va_hex(unsigned int n);
+int print_hex(va_list args);
+int print_va_HEX(unsigned int n);
+int print_HEX(va_list args);
 
 
 #endif

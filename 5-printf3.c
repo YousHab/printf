@@ -26,7 +26,7 @@ int print_va_octal(unsigned int n)
 
 	if (n / 8 != 0)
 	{
-		count = print_va_octal(n / 8);
+		count += print_va_octal(n / 8);
 	}
 	_putchar(n % 8 + '0');
 	count++;

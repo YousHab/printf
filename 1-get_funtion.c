@@ -15,6 +15,8 @@ int (*get_function(char c))(va_list)
 		{'b', print_bin},
 		{'u', print_unsigned},
 		{'o', print_octal},
+		{'x', print_hex},
+		{'X', print_HEX},
 		{'\0', NULL}};
 
 	while (specifiers[i].s != '\0')
