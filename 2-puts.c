@@ -30,6 +30,6 @@ int _puts(char *s)
 
 int _putchar(int c)
 {
-	write(1, buffer, 1);
+	write(1, &c, 1);
 	return (1);
 }
