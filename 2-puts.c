@@ -40,8 +40,8 @@ int _putchar(int c)
 	}
 	else
 	{
-		buffer[BUFFER_SIZE] = '\0';
-		write(1, buffer, BUFFER_SIZE);
+		buffer[i] = '\0';
+		write(1, buffer, i);
 		i = 0;
 	}
 	return (1);
