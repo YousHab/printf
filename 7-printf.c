@@ -12,13 +12,15 @@ int print_S(va_list args)
 	_putchar('\\');
 	_putchar('x');
 	count = 2;
+	if (s == NULL)
+		s = "(null)";
 	while(*s)
 	{
-		if (*s < 23 || *s >= 127)
+		if (*s < 32 || *s >= 127)
 		{
-		_putchar((*s >> 4) < 10 ? ('0' + (*s >> 4)) : ('A' + (*s >> 4) - 10));
-		_putchar((*s & 0x0F) < 10 ? ('0' + (*s & 0x0F)) : ('A' + (*s & 0x0F) - 10));
-		count += 2;
+			_putchar((*s >> 4) < 10 ? ('0' + (*s >> 4)) : ('A' + (*s >> 4) - 10));
+			_putchar((*s & 0x0F) < 10 ? ('0' + (*s & 0x0F)) : ('A' + (*s & 0x0F) - 10));
+			count += 2;
 		}
 		else
 		{
