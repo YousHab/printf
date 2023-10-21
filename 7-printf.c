@@ -12,11 +12,11 @@ int print_S(va_list args)
 	char *s;
 	int count = 0;
 	int c;
-	
+
 	s = va_arg(args, char *);
 	if (s == NULL)
 		s = "(null)";
-	while(*s)
+	while (*s)
 	{
 		if (*s < 32 || *s >= 127)
 		{
