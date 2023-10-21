@@ -7,10 +7,10 @@
  * Return: the count.
  */
 
-int print_addr(va_list args)
+int print_address(va_list args)
 {
 	int count = 0;
-	long int n;
+	unsigned int n;
 	char *s = "(nil)";
 	void *ptr;
 
@@ -20,7 +20,7 @@ int print_addr(va_list args)
 		count = _puts(s);
 		return (count);
 	}
-	n = (unsigned long int)ptr;
+	n = (unsigned int long)ptr;
 	_putchar('0');
 	_putchar('x');
 	count++;
