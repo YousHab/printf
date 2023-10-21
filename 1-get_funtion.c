@@ -19,6 +19,7 @@ int (*get_function(char c))(va_list)
 		{'X', print_HEX},
 		{'S', print_S},
 		{'r', print_rev},
+		{'R', print_rot},
 		{'\0', NULL}};
 
 	while (specifiers[i].s != '\0')
