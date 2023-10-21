@@ -46,5 +46,6 @@ int print_HEX(va_list args);
 int print_S(va_list args);
 int print_rev(va_list args);
 int print_rot(va_list args);
+int print_address(va_list args);
 
 #endif

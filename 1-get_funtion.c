@@ -18,6 +18,7 @@ int (*get_function(char c))(va_list)
 		{'x', print_hex},
 		{'X', print_HEX},
 		{'S', print_S},
+		{'p', print_address},
 		{'r', print_rev},
 		{'R', print_rot},
 		{'\0', NULL}};
