@@ -7,7 +7,7 @@
  * Return: the count.
  */
 
-int print_address(va_list args)
+int print_addr(va_list args)
 {
 	int count = 0;
 	long int n;
