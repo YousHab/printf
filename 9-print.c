@@ -15,7 +15,7 @@ int print_address(va_list args)
 	void *ptr;
 
 	ptr = va_arg(args, void *);
-	if (s == NULL)
+	if (ptr == NULL)
 	{
 		count = _puts(s);
 		return (count);
