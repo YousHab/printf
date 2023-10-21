@@ -24,6 +24,6 @@ int print_address(va_list args)
 	_putchar('0');
 	_putchar('x');
 	count++;
-	count += print_va_HEX(n);
+	count += print_va_hex(n);
 	return (count);
 }
